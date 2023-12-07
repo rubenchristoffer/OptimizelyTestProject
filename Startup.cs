@@ -24,7 +24,6 @@ public class Startup
         services.AddRazorPages();
 
         services
-            
             .AddCms()
             .AddHttpContextAccessor()
             .AddCmsAspNetIdentity<ApplicationUser>()
@@ -36,12 +35,12 @@ public class Startup
                 options.ViewLocationFormats.Add("/Views/Shared/Components/{1}/{0}" + RazorViewEngine.ViewExtension);
                 options.ViewLocationFormats.Add("/Views/Shared/Components/Navigation/{0}" + RazorViewEngine.ViewExtension);
                 options.ViewLocationFormats.Add("/CustomTools/Views/{1}/{0}" + RazorViewEngine.ViewExtension);
-            }); ;   
+            });
 
-        services.Configure<CookiePolicyOptions>(options => {
+        /*services.Configure<CookiePolicyOptions>(options => {
             options.CheckConsentNeeded = context => true;
             options.MinimumSameSitePolicy = SameSiteMode.Strict;
-        });
+        });*/
 
         if (!_webHostingEnvironment.IsDevelopment())
         {
@@ -74,7 +73,7 @@ public class Startup
             app.UseDeveloperExceptionPage();
         }
 
-        app.UseStatusCodePagesWithReExecute("/error/{0}");
+        //app.UseStatusCodePagesWithReExecute("/error/{0}");
         //app.UseNotFoundHandler();
         //app.UseOptimizelyNotFoundHandler();
         app.UseRouting();

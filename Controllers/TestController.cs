@@ -2,10 +2,10 @@
 
 namespace OptimizelyTestProject.Controllers
 {
-    [Route("{controller}")]
     public class TestController : Controller
     {
 
+        [Route("/test")]
         public IActionResult Index()
         {
             return Json(new { id = 1 });
