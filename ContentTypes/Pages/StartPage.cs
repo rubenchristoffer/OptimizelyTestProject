@@ -1,4 +1,4 @@
-﻿using EPiServer.DataAbstraction.Internal;
+using EPiServer.DataAbstraction.Internal;
 
 namespace OptimizelyTestProject.ContentTypes.Pages
 {

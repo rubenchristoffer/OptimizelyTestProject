@@ -1,4 +1,4 @@
-﻿using EPiServer.ServiceLocation;
+using EPiServer.ServiceLocation;
 using EPiServer.Web.Mvc;
 using Microsoft.AspNetCore.Mvc;
 using OptimizelyTestProject.ContentTypes.Pages;

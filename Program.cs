@@ -7,8 +7,5 @@ public class Program
     public static IHostBuilder CreateHostBuilder(string[] args) =>
         Host.CreateDefaultBuilder(args)
             .ConfigureCmsDefaults()
-            .ConfigureWebHostDefaults(webBuilder => {
-                webBuilder.UseStartup<Startup>();
-                webBuilder.UseStaticWebAssets();
-            });
+            .ConfigureWebHostDefaults(webBuilder => webBuilder.UseStartup<Startup>());
 }
