@@ -38,6 +38,8 @@ public class Startup
             app.UseDeveloperExceptionPage();
         }
 
+        app.UseStatusCodePagesWithReExecute("/error/{0}");
+
         app.UseStaticFiles();
         app.UseRouting();
         app.UseAuthentication();
@@ -46,6 +48,7 @@ public class Startup
         app.UseEndpoints(endpoints =>
         {
             endpoints.MapContent();
+            endpoints.MapControllers();
         });
     }
 }

@@ -1,5 +1,21 @@
+@using EPiServer.ServiceLocation
 @using OptimizelyTestProject.ContentTypes.Pages
+@using System.Globalization
 
 @model StartPage
 
-Empty start pagel
+@{
+    var test1 = ServiceLocator.Current.GetInstance<IContentLanguageAccessor>().Language;
+    var test2 = CultureInfo.CurrentCulture;
+    var test3 = CultureInfo.CurrentUICulture;
+}
+
+Start page:
+<br />
+<br />
+
+Test1: @test1
+<br />
+Test2: @test2
+<br />
+Test3: @test3
